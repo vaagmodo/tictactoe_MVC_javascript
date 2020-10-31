@@ -71,7 +71,9 @@ class Model {
 }
 
 class View {
-
+    constructor() {
+        this.playEvent = new Event();
+    }
 }
 
 class Controller {
