@@ -26,7 +26,29 @@ class Model {
         this.gameDrawEvent = new Event();
     }
 
+    gameStart(moveIndex) {
+        if (this.gameFinished || moveIndex > 8 || moveIndex < 0 || this.tictactoeBoard[moveIndex]) {
+            return false;
+        }
+        this.tictactoeBoard[moveIndex] = this.currrentPlayer;
+        this.gameFinished = this.gameWinner() || this.gameDraw()
+        if (!this.gameFinished) {
+            this.switchCurrentPlayer();
+        }
+        return true;
+    }
 
+    gameWinner() {
+
+    }
+
+    gameDraw() {
+
+    }
+
+    switchCurrentPlayer() {
+
+    }
 }
 
 class View {
