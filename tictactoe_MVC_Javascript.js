@@ -1,5 +1,17 @@
 class Event {
+    constructor() {
+        this.listeners = []
+    }
 
+    addListeners(listener) {
+        this.listeners.push(listener)
+    }
+
+    triggerListener(params) {
+        this.listeners.forEach(listener => {
+            listener(params)
+        })
+    }
 }
 
 class Model {
