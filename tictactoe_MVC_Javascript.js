@@ -58,7 +58,11 @@ class Model {
     }
 
     gameDraw() {
-
+        const draw = this.tictactoeBoard.every(cell => cell)
+        if (draw) {
+            this.gameDrawEvent.triggerListener()
+        }
+        return draw;
     }
 
     switchCurrentPlayer() {
