@@ -15,6 +15,17 @@ class Event {
 }
 
 class Model {
+    constructor() {
+        this.tictactoeBoard = Array(9).fill();
+        this.currrentPlayer = 'x';
+        this.gameFinished = false;
+
+        this.gameRestartEvent = new Event();
+        this.cellUpdateEvent = new Event();
+        this.gameWinnerEvent = new Event();
+        this.gameDrawEvent = new Event();
+    }
+
 
 }
 
