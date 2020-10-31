@@ -66,7 +66,7 @@ class Model {
     }
 
     switchCurrentPlayer() {
-
+        this.currrentPlayer = this.currrentPlayer === 'x' ? 'o' : 'x'
     }
 }
 
