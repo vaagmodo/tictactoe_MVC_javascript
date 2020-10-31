@@ -39,7 +39,22 @@ class Model {
     }
 
     gameWinner() {
-
+        const gameWinningPossibility = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+        const gameWon = gameWinningPossibility.some(possibility =>
+            this.tictactoeBoard[possibility[0]] && this.tictactoeBoard[possibility[0]] === this.tictactoeBoard[possibility[1]] && this.tictactoeBoard[possibility[1]] === this.tictactoeBoard[possibility[2]])
+        if (gameWon) {
+            this.gameWinnerEvent.triggerListener(this.currrentPlayer)
+        }
+        return gameWon
     }
 
     gameDraw() {
