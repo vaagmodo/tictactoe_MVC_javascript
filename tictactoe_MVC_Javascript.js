@@ -75,6 +75,10 @@ class View {
     constructor() {
         this.playEvent = new Event();
     }
+
+    gamewinner(winner) {
+        this.message.innerHTML = `${winner} won the Game!!`
+    }
 }
 
 class Controller {
