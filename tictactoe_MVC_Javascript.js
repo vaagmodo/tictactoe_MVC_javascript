@@ -79,6 +79,10 @@ class View {
     gamewinner(winner) {
         this.message.innerHTML = `${winner} won the Game!!`
     }
+
+    gameDraw() {
+        this.message.innerHTML = "It's a Draw!!"
+    }
 }
 
 class Controller {
