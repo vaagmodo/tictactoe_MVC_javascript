@@ -76,6 +76,11 @@ class View {
         this.playEvent = new Event();
     }
 
+    getElement(selector) {
+        const element = document.querySelector(selector);
+        return element;
+    }
+
     gamewinner(winner) {
         this.message.innerHTML = `${winner} won the Game!!`
     }
