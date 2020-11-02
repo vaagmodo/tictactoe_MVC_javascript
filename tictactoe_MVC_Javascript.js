@@ -89,6 +89,8 @@ class Controller {
     constructor(model, view) {
         this.model = model;
         this.view = view;
+        this.model.gameWinnerEvent.addListeners(winner => { this.view.gamewinner(winner); });
+        this.model.gameDrawEvent.addListeners(() => { this.view.gameDraw(); });
     }
 }
 
